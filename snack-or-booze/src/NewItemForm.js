@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Form, FormGroup, Label, Input, Button, FormFeedback } from "reactstrap";
 import { } from "react-router-dom";
 import SnackOrBoozeApi from "./Api";
 import Axios from "axios";
 
-function newItemForm({drinks, snacks}){
+function NewItemForm({drinks, snacks}){
     const [formData, setFormData] = useState({
       category: '',
       name: '',
@@ -119,3 +119,5 @@ function newItemForm({drinks, snacks}){
     </Form>
   )
 }
+
+export default NewItemForm

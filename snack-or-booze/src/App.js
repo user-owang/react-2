@@ -8,6 +8,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Menu from "./FoodMenu";
 import Item from "./FoodItem";
 import NotFound from "./NotFound";
+import NewItemForm from "./NewItemForm";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
             <Route path="/snacks/:id" element={<Item items={snacks} cantFind="/snacks" />} />
             <Route path="/drinks" element={<Menu items={drinks} title="Drink" />} />
             <Route path="/drinks/:id" element={<Item items={drinks} cantFind="/drinks" />} />
+            <Route path="/new-item-form" element={<NewItemForm drinks={drinks} snacks={snacks} />} />
             <Route path="/*" element={<NotFound/>} />
           </Routes>
         </main>

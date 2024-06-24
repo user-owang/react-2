@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardBody, CardTitle, ListGroup, ListGroupItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
-async function Home({snacks,drinks}) {
+function Home({ snacks,drinks }) {
   return (
     <section className="col-md-8">
       <Card>
